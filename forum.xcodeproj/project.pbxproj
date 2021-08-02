@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,10 @@
 		C7BD325D26B76B970031623B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD325C26B76B970031623B /* ContentView.swift */; };
 		C7BD325F26B76B980031623B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7BD325E26B76B980031623B /* Assets.xcassets */; };
 		C7BD326226B76B980031623B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7BD326126B76B980031623B /* Preview Assets.xcassets */; };
+		C7BD326B26B7759A0031623B /* NCMB in Frameworks */ = {isa = PBXBuildFile; productRef = C7BD326A26B7759A0031623B /* NCMB */; };
+		C7BD326D26B776A60031623B /* APIKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7BD326C26B776A60031623B /* APIKey.plist */; };
+		C7BD326F26B776EC0031623B /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD326E26B776EC0031623B /* KeyManager.swift */; };
+		C7BD329E26B799740031623B /* Hydra in Frameworks */ = {isa = PBXBuildFile; productRef = C7BD329D26B799740031623B /* Hydra */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,8 @@
 		C7BD325E26B76B980031623B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7BD326126B76B980031623B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C7BD326326B76B980031623B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7BD326C26B776A60031623B /* APIKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKey.plist; sourceTree = "<group>"; };
+		C7BD326E26B776EC0031623B /* KeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7BD326B26B7759A0031623B /* NCMB in Frameworks */,
+				C7BD329E26B799740031623B /* Hydra in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +65,8 @@
 				C7BD325E26B76B980031623B /* Assets.xcassets */,
 				C7BD326326B76B980031623B /* Info.plist */,
 				C7BD326026B76B980031623B /* Preview Content */,
+				C7BD326C26B776A60031623B /* APIKey.plist */,
+				C7BD326E26B776EC0031623B /* KeyManager.swift */,
 			);
 			path = forum;
 			sourceTree = "<group>";
@@ -85,6 +95,10 @@
 			dependencies = (
 			);
 			name = forum;
+			packageProductDependencies = (
+				C7BD326A26B7759A0031623B /* NCMB */,
+				C7BD329D26B799740031623B /* Hydra */,
+			);
 			productName = forum;
 			productReference = C7BD325726B76B970031623B /* forum.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +126,10 @@
 				Base,
 			);
 			mainGroup = C7BD324E26B76B970031623B;
+			packageReferences = (
+				C7BD326926B7759A0031623B /* XCRemoteSwiftPackageReference "ncmb_swift" */,
+				C7BD329C26B799740031623B /* XCRemoteSwiftPackageReference "Hydra" */,
+			);
 			productRefGroup = C7BD325826B76B970031623B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +144,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7BD326D26B776A60031623B /* APIKey.plist in Resources */,
 				C7BD326226B76B980031623B /* Preview Assets.xcassets in Resources */,
 				C7BD325F26B76B980031623B /* Assets.xcassets in Resources */,
 			);
@@ -140,6 +159,7 @@
 			files = (
 				C7BD325D26B76B970031623B /* ContentView.swift in Sources */,
 				C7BD325B26B76B970031623B /* forumApp.swift in Sources */,
+				C7BD326F26B776EC0031623B /* KeyManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +348,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C7BD326926B7759A0031623B /* XCRemoteSwiftPackageReference "ncmb_swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NIFCLOUD-mbaas/ncmb_swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+		C7BD329C26B799740031623B /* XCRemoteSwiftPackageReference "Hydra" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/malcommac/Hydra.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C7BD326A26B7759A0031623B /* NCMB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C7BD326926B7759A0031623B /* XCRemoteSwiftPackageReference "ncmb_swift" */;
+			productName = NCMB;
+		};
+		C7BD329D26B799740031623B /* Hydra */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C7BD329C26B799740031623B /* XCRemoteSwiftPackageReference "Hydra" */;
+			productName = Hydra;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C7BD324F26B76B970031623B /* Project object */;
 }
