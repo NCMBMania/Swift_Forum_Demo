@@ -35,40 +35,26 @@ struct forumApp: App {
     }
     
     func checkAuth() -> Void {
-        var result = NCMBUser.currentUser
-        if result != nil {
+        // 認証データがあれば処理は終了
+        if NCMBUser.currentUser != nil {
             return;
         }
-        let semaphore = DispatchSemaphore(value: 0)
-        NCMBUser.automaticCurrentUserInBackground(callback: { _ in
-            result = NCMBUser.currentUser
-            semaphore.signal()
-        })
-        semaphore.wait()
-        return
+        _ = NCMBUser.automaticCurrentUser()
     }
     
     func checkSession() -> Bool {
-        let semaphore = DispatchSemaphore(value: 0)
-        var result = false
         var query : NCMBQuery<NCMBObject> = NCMBQuery.getQuery(className: "Todo")
         query.limit = 1 // レスポンス件数を最小限にする
         // アクセス
-        query.findInBackground(callback: { results in
-            // 結果の判定
-            switch results {
-            case .success(_):
-                result = true
-                semaphore.signal()
-            case .failure(_):
-                // 強制ログアウト処理
-                NCMBUser.logOutInBackground(callback: { _ in
-                    result = false
-                    semaphore.signal()
-                })
-            }
-        })
-        semaphore.wait()
-        return result
+        let results = query.find()
+        // 結果の判定
+        switch results {
+        case .success(_): break
+        case .failure(_):
+            // 強制ログアウト処理
+            _ = NCMBUser.logOut()
+            return false
+        }
+        return true
     }
 }

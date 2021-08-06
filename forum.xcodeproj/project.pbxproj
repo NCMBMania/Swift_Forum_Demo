@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7077D2A26B8ABF700778E0D /* APIKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7077D2926B8ABF700778E0D /* APIKey.plist */; };
+		C720FC3D26BA434400C2697A /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720FC3C26BA434400C2697A /* ImagePickerView.swift */; };
 		C7BD325B26B76B970031623B /* forumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD325A26B76B970031623B /* forumApp.swift */; };
 		C7BD325D26B76B970031623B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD325C26B76B970031623B /* ContentView.swift */; };
 		C7BD325F26B76B980031623B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7BD325E26B76B980031623B /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C7077D2926B8ABF700778E0D /* APIKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKey.plist; sourceTree = "<group>"; };
+		C720FC3C26BA434400C2697A /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		C7BD325726B76B970031623B /* forum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = forum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7BD325A26B76B970031623B /* forumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forumApp.swift; sourceTree = "<group>"; };
 		C7BD325C26B76B970031623B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 				C7BD326026B76B980031623B /* Preview Content */,
 				C7BD326C26B776A60031623B /* APIKey.plist */,
 				C7BD326E26B776EC0031623B /* KeyManager.swift */,
+				C7077D2926B8ABF700778E0D /* APIKey.plist */,
+				C720FC3C26BA434400C2697A /* ImagePickerView.swift */,
 			);
 			path = forum;
 			sourceTree = "<group>";
@@ -145,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7BD326D26B776A60031623B /* APIKey.plist in Resources */,
+				C7077D2A26B8ABF700778E0D /* APIKey.plist in Resources */,
 				C7BD326226B76B980031623B /* Preview Assets.xcassets in Resources */,
 				C7BD325F26B76B980031623B /* Assets.xcassets in Resources */,
 			);
@@ -157,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C720FC3D26BA434400C2697A /* ImagePickerView.swift in Sources */,
 				C7BD325D26B76B970031623B /* ContentView.swift in Sources */,
 				C7BD325B26B76B970031623B /* forumApp.swift in Sources */,
 				C7BD326F26B776EC0031623B /* KeyManager.swift in Sources */,
