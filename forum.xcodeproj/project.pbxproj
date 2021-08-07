@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		C7077D2A26B8ABF700778E0D /* APIKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7077D2926B8ABF700778E0D /* APIKey.plist */; };
 		C720FC3D26BA434400C2697A /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720FC3C26BA434400C2697A /* ImagePickerView.swift */; };
+		C7863D5426BD3BCB003DA6EA /* ThreadListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7863D5326BD3BCB003DA6EA /* ThreadListView.swift */; };
+		C7863D5626BD3BFE003DA6EA /* CommentListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7863D5526BD3BFE003DA6EA /* CommentListRow.swift */; };
+		C7863D5826BD3C1A003DA6EA /* ThreadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7863D5726BD3C1A003DA6EA /* ThreadView.swift */; };
+		C7863D5A26BD3C36003DA6EA /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7863D5926BD3C36003DA6EA /* ImageView.swift */; };
+		C7863D5C26BD3C55003DA6EA /* ThreadListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7863D5B26BD3C55003DA6EA /* ThreadListRow.swift */; };
+		C7863D5E26BD3C6F003DA6EA /* AddCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7863D5D26BD3C6F003DA6EA /* AddCommentView.swift */; };
+		C7863D6026BD3C84003DA6EA /* AddThreadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7863D5F26BD3C84003DA6EA /* AddThreadView.swift */; };
 		C7BD325B26B76B970031623B /* forumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD325A26B76B970031623B /* forumApp.swift */; };
 		C7BD325D26B76B970031623B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD325C26B76B970031623B /* ContentView.swift */; };
 		C7BD325F26B76B980031623B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7BD325E26B76B980031623B /* Assets.xcassets */; };
@@ -22,6 +29,13 @@
 /* Begin PBXFileReference section */
 		C7077D2926B8ABF700778E0D /* APIKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKey.plist; sourceTree = "<group>"; };
 		C720FC3C26BA434400C2697A /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		C7863D5326BD3BCB003DA6EA /* ThreadListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadListView.swift; sourceTree = "<group>"; };
+		C7863D5526BD3BFE003DA6EA /* CommentListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListRow.swift; sourceTree = "<group>"; };
+		C7863D5726BD3C1A003DA6EA /* ThreadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadView.swift; sourceTree = "<group>"; };
+		C7863D5926BD3C36003DA6EA /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		C7863D5B26BD3C55003DA6EA /* ThreadListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadListRow.swift; sourceTree = "<group>"; };
+		C7863D5D26BD3C6F003DA6EA /* AddCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentView.swift; sourceTree = "<group>"; };
+		C7863D5F26BD3C84003DA6EA /* AddThreadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddThreadView.swift; sourceTree = "<group>"; };
 		C7BD325726B76B970031623B /* forum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = forum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7BD325A26B76B970031623B /* forumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forumApp.swift; sourceTree = "<group>"; };
 		C7BD325C26B76B970031623B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +59,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C7863D6126BD3CE2003DA6EA /* Thread */ = {
+			isa = PBXGroup;
+			children = (
+				C7863D5F26BD3C84003DA6EA /* AddThreadView.swift */,
+				C7863D5326BD3BCB003DA6EA /* ThreadListView.swift */,
+				C7863D5726BD3C1A003DA6EA /* ThreadView.swift */,
+				C7863D5B26BD3C55003DA6EA /* ThreadListRow.swift */,
+			);
+			path = Thread;
+			sourceTree = "<group>";
+		};
+		C7863D6226BD3CFF003DA6EA /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				C7863D5526BD3BFE003DA6EA /* CommentListRow.swift */,
+				C7863D5D26BD3C6F003DA6EA /* AddCommentView.swift */,
+			);
+			path = Comment;
+			sourceTree = "<group>";
+		};
 		C7BD324E26B76B970031623B = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +98,8 @@
 		C7BD325926B76B970031623B /* forum */ = {
 			isa = PBXGroup;
 			children = (
+				C7863D6226BD3CFF003DA6EA /* Comment */,
+				C7863D6126BD3CE2003DA6EA /* Thread */,
 				C7BD325A26B76B970031623B /* forumApp.swift */,
 				C7BD325C26B76B970031623B /* ContentView.swift */,
 				C7BD325E26B76B980031623B /* Assets.xcassets */,
@@ -73,6 +109,7 @@
 				C7BD326E26B776EC0031623B /* KeyManager.swift */,
 				C7077D2926B8ABF700778E0D /* APIKey.plist */,
 				C720FC3C26BA434400C2697A /* ImagePickerView.swift */,
+				C7863D5926BD3C36003DA6EA /* ImageView.swift */,
 			);
 			path = forum;
 			sourceTree = "<group>";
@@ -164,10 +201,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7863D5A26BD3C36003DA6EA /* ImageView.swift in Sources */,
 				C720FC3D26BA434400C2697A /* ImagePickerView.swift in Sources */,
+				C7863D5E26BD3C6F003DA6EA /* AddCommentView.swift in Sources */,
+				C7863D5C26BD3C55003DA6EA /* ThreadListRow.swift in Sources */,
 				C7BD325D26B76B970031623B /* ContentView.swift in Sources */,
 				C7BD325B26B76B970031623B /* forumApp.swift in Sources */,
 				C7BD326F26B776EC0031623B /* KeyManager.swift in Sources */,
+				C7863D5826BD3C1A003DA6EA /* ThreadView.swift in Sources */,
+				C7863D5626BD3BFE003DA6EA /* CommentListRow.swift in Sources */,
+				C7863D5426BD3BCB003DA6EA /* ThreadListView.swift in Sources */,
+				C7863D6026BD3C84003DA6EA /* AddThreadView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
